@@ -60,7 +60,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 guard.init_app(app, User)
 
 # Initialize a local database for the example
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:////Users/ivan/Desktop/AI.Remove-React-Flask/database.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + dir_path + '/database.db'
 db.init_app(app)
 
 # Initializes CORS so that the api_tool can talk to the example app
@@ -94,21 +94,17 @@ def post():
     file = request.files['file']
     print(file)
     file.save(os.path.join(dir_path + "/user_data/foreground", file.filename))
-    #rmbg.invert(dir_path,file.filename)
-    #file = jsonData['media']
-    #print(files)
-    filename = dir_path + '/user_data/processed' + '/IMG_8040.JPG'
-    processed_file = [file,filename]
+    #############################
+    #nn to process file
+    #############################
+    filename = ''
     return filename
 
 @app.route("/api/upload/background", methods=['POST'])
 def post2():
-    #files = request.files
     file = request.files['file']
     print(file)
-    #file.save(os.path.join(dir_path + "/user_data/background", file.filename))
-    #file = jsonData['media']
-    #print(files)
+    
     return "done uploading background"
 
 @app.route('/api/login', methods=['POST'])

@@ -174,7 +174,6 @@ class ShowImage extends Component {
     axios.post("http://localhost:5000/api/upload/foreground", formData)
     .then((response) => { //setting state if post was successful
       console.log(response.data);
-      
     });
     
     //loading preview of image
@@ -218,7 +217,7 @@ class ShowImage extends Component {
                       <div className="col-12 col-sm-10 col-lg-8">
                         <input id="fileButton" type="file" accept=".mp4" name="file" hidden onChange={this._handleImageChange}/>
                         <button id="maskFileButton" class="btn btn-outline-primary" style={{top:'470px', left:'300px', position:'absolute'}} onClick={this._fileUploadButton}>
-                            Upload Image 
+                            Upload Video 
                         </button>
                       </div>
                   </div>

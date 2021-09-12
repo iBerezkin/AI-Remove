@@ -2,8 +2,6 @@ import React, { Component, useState } from 'react';
 import Header from '../HeaderSection/Header';
 import FooterSection from '../FooterSection/Footer';
 import ReactPlayer from 'react-player';
-import myVideo from '../video_frames.mp4'
-import myVideo2 from '../2.mp4'
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 
@@ -24,7 +22,7 @@ class Home extends Component {
                             <div className='player-wrapper'>
                                 <ReactPlayer
                                 className='react-player fixed-bottom'
-                                url= {myVideo}
+                                url= {''}
                                 width='50%'
                                 height='50%'
                                 controls = {true}
@@ -39,7 +37,7 @@ class Home extends Component {
                             <div className='player-wrapper'>
                                 <ReactPlayer
                                 className='react-player fixed-bottom'
-                                url= {myVideo2}
+                                url= {''}
                                 width='50%'
                                 height='50%'
                                 controls = {true}
@@ -54,7 +52,7 @@ class Home extends Component {
                             <div className='player-wrapper'>
                                 <ReactPlayer
                                 className='react-player fixed-bottom'
-                                url= {myVideo}
+                                url= {''}
                                 width='50%'
                                 height='50%'
                                 controls = {true}
