@@ -1,2 +1,2 @@
 # AI-Remove
-Front-end and Back-end of AI.Remove server
+Web Server for backfround removal with ResNet50 backbone 
